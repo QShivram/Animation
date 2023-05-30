@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .a
+     {
+      width: 100px;
+      height: 100px;
+      margin: 100px auto;
+      border-radius: 10px;
+     }
+     
+     div
+     {
+     
+      display: flex;
+      justify-content:space-around;
+      padding: 0px 25px 0px 15px;
+     transition: all 1s linear 1s;
+    
+     }
+     div:hover
+     {
+      background-color: black;
+        transform: perspective(200px)rotateY(360deg);
+     }
+     .a:hover
+     {
+           width: 130px;
+           height: 120px;
+           transform: perspective(200px)rotateY(180px);
+     }
+     p
+     {
+       color: darkgreen;
+       overflow: hidden;
+       width: 80px;
+       height: 30px;
+       margin: 200px 0 0  -90px;
+       
+     }
+     p:hover{
+      background-color: rgb(199, 125, 29);
+      margin-top: 230px;
+      
+     }#e
+     {
+      margin: 128px 0 135px 0px;
+      padding: 27px;
+     }
+    
+    </style>
+</head>
+<body>
+    <div>
+      <div id="e">
+        <button>View all</button>
+        <select >
+          <option>sort</option>
+          <option>filter</option>
+          <option>Set price</option>
+          <option >Brand Name</option>
+
+        </select>
+        
+      </div>
+      <div ><img src="src/E.jpg" alt="" class="a"><p>Price:- 2000</p></div>
+      <div><img src="src/B.jpg" alt="" class="a"><p>Price:-3000</p></div>
+      <div><img src="src/C.jpg" alt="" class="a"><p>Price:-2000</p></div>
+      <div> <img src="src/D.jpg" alt="" class="a"><p>Price:-5000</p></div>
+      <div><img src="src/A.jpg" alt="" class="a"><p>Price:-6000</p></div>
+    </div>
+</body>
+</html>
