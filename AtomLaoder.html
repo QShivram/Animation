@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: black;
+        }
+        .atom-loader
+        {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            animation: single 15s linear infinite ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes single {
+           to
+           {
+            transform: rotate(360deg);
+           } 
+        }
+        .atom-loader::before
+        {
+          content: "";
+          display: block;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.5);  
+        }
+        .ellipse
+        {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .ellipse-1
+        {
+            transform: rotateY(70deg);
+            border-bottom: 7px solid yellow;
+            border-top: 7px solid palevioletred;
+            animation:spain1 1.2s ease-in  infinite ;
+            filter: drop-shadow(0 10px 15px rgba(113,75,198,1));
+        }
+        @keyframes spain1 {
+            to{
+                transform: rotateY(70deg) rotateZ(360deg);
+            }
+            
+        }
+        .ellipse-2
+        {
+            transform: rotateY(70deg) rotateY(30deg);
+            border-bottom: 7px solid green;
+            border-top: 7px solid cyan;
+            animation:spain2 1.2s ease-in  infinite ;
+            filter: drop-shadow(0 10px 15px rgba(252,41,71,1));
+        }
+        @keyframes spain2 {
+            to{
+                transform: rotateX(70deg)
+                rotateY(360deg)
+                rotateZ(360deg);
+            }
+            
+        }
+        .ellipse-3
+        {
+            transform: rotateY(-70deg) rotateY(30deg);
+            border-bottom: 7px solid blue;
+            border-top: 7px solid red;
+            animation:spain3 1.2s ease-in  infinite ;
+            filter: drop-shadow(0 10px 15px rgba(44,211,225));
+        }
+        @keyframes spain3 {
+            to{
+                transform: rotateX(-70deg)
+                rotateY(360deg)
+                rotateZ(360deg);
+            }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="atom-loader" >
+        <div class="ellipse ellipse-1 "></div>
+        <div class="ellipse ellipse-2"></div>
+        <div class="ellipse ellipse-3"></div>
+    </div>
+</body>
+</html>
